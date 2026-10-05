@@ -37,6 +37,26 @@ npm run build
 npm run lint
 ```
 
+## Docker
+
+### Ejecutar con Docker Compose
+
+```bash
+docker compose up --build
+```
+
+La aplicación quedará disponible en:
+
+```text
+http://localhost:5173
+```
+
+### Detener el contenedor
+
+```bash
+docker compose down
+```
+
 ## Estructura básica
 
 ```text
