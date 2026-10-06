@@ -57,14 +57,41 @@ http://localhost:5173
 docker compose down
 ```
 
+## Ver la web
+
+Para abrir la aplicación en el navegador, ejecuta:
+
+```bash
+npm install
+npm run dev -- --host 0.0.0.0
+```
+
+Luego visita:
+
+```text
+http://localhost:5173
+```
+
+## Funcionalidad añadida
+
+El proyecto ya incluye la parte del punto 2 correspondiente a la búsqueda de productos:
+
+- búsqueda por id o por título parcial,
+- mensajes claros si no existe el producto,
+- cálculo del precio de venta según el estado del juego,
+- vista de resultado con la información principal del producto.
+
 ## Estructura básica
 
 ```text
 .
 ├── index.html
 ├── src/
+│   ├── catalogo.js
 │   ├── main.js
+│   ├── negocio.js
 │   └── style.css
+├── NOVEDADES_PUNTO_2.md
 ├── eslint.config.mjs
 ├── package.json
 ├── README.md
