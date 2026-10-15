@@ -8,3 +8,6 @@ export const formatearProducto = (producto) => {
 
 export const listarProductos = (productos) =>
   productos.map(formatearProducto).join("\n");
+
+export const formatearEuros = (importe) =>
+  importe.toLocaleString("es-ES", { style: "currency", currency: "EUR" });

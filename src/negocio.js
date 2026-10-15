@@ -19,7 +19,7 @@ export const calcularDescuentoVolumen = (cantidad) => {
     return 0; // Sin descuento
 };
 
-const redondearPrecio = (precio) => Math.round(precio * 100) / 100;
+export const redondearPrecio = (precio) => Math.round(precio * 100) / 100;
 
 export const calcularPrecioFinal = (precioBase, estado, cantidad) => {
     const precioVenta = calcularPrecioVenta(precioBase, estado);
@@ -50,3 +50,14 @@ export const filtrarStockBajo = (productos) => productos.filter(tieneStockBajo);
 
 export const filtrarPorCategoria = (productos, categoria) =>
   productos.filter((producto) => producto.categoria === categoria);
+
+export const buscarProducto = (productos, texto) => {
+  const porId = productos.find((producto) => producto.id === Number(texto));
+
+  return (
+    porId ??
+    productos.find((producto) =>
+      producto.titulo.toLowerCase().includes(texto.toLowerCase())
+    )
+  );
+};
