@@ -41,3 +41,7 @@ export const reponerStock = (productos, id, cantidad) =>
       ? { ...producto, stock: producto.stock + cantidad }
       : producto
   );
+
+const UMBRAL_STOCK_BAJO = 3;
+
+export const tieneStockBajo = (producto) => producto.stock < UMBRAL_STOCK_BAJO;
