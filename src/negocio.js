@@ -27,3 +27,17 @@ export const calcularPrecioFinal = (precioBase, estado, cantidad) => {
     const precioConDescuento = precioVenta - (precioVenta * descuentoVolumen);
     return redondearPrecio(precioConDescuento);
 };
+
+export const venderProducto = (productos, id, cantidad) =>
+    producto.map((producto) =>
+        producto.id === id
+            ? { ...producto, stock: producto.stock - cantidad }
+            : producto
+    );
+
+export const reponerStock = (productos, id, cantidad) =>
+  productos.map((producto) =>
+    producto.id === id
+      ? { ...producto, stock: producto.stock + cantidad }
+      : producto
+  );
