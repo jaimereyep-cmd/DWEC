@@ -162,6 +162,9 @@ while (continuar) {
     case "3":
       gestionarVenta();
       break;
+    case "4":
+      gestionarReposicion();
+      break;
     case "6":
       continuar = false;
       alert("Hasta pronto");
