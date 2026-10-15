@@ -7,6 +7,7 @@ import {
   calcularPrecioFinal,
   redondearPrecio,
   venderProducto,
+  reponerStock,
 } from "./negocio.js";
 import { formatearProducto, formatearEuros } from "./vistas.js";
 
@@ -65,6 +66,32 @@ const gestionarVenta = () => {
   }
 };
 
+const gestionarReposicion = () => {
+  const texto = prompt("Id o título del producto a reponer:")?.trim();
+
+  if (!texto) {
+    alert("No has introducido ningún producto");
+    return;
+  }
+
+  const producto = buscarProducto(catalogoActual, texto);
+
+  if (!producto) {
+    alert(`No se ha encontrado ningún producto para "${texto}"`);
+    return;
+  }
+
+  const { id, titulo, stock } = producto;
+  const cantidad = Number(prompt(`¿Cuántas unidades de "${titulo}" quieres añadir? (stock: ${stock})`));
+
+  if (!Number.isInteger(cantidad) || cantidad <= 0) {
+    alert("La cantidad debe ser un número entero mayor que 0");
+  } else {
+    catalogoActual = reponerStock(catalogoActual, id, cantidad);
+    alert(`Stock repuesto. "${titulo}" pasa de ${stock} a ${stock + cantidad} unidades`);
+  }
+};
+
 const bajos = filtrarStockBajo(catalogoActual);
 
 alert(
@@ -112,6 +139,9 @@ const gestionarCatalogo = () => {
       );
       break;
     }
+    case "4":
+      gestionarReposicion();
+      break;
     default:
       alert("Opción no válida");
   }
