@@ -1,20 +1,29 @@
-# RetroStock
-
-Proyecto de JavaScript vanilla creado con Vite.
-
 ## Organización del código
 
-El código se divide por responsabilidades:
+Separé el proyecto en cuatro ficheros dentro de `src/`, cada uno con una
+única responsabilidad:
 
-| Archivo           | Responsabilidad                                                  |
-| ----------------- | ---------------------------------------------------------------- |
-| `src/catalogo.js` | Datos iniciales de los videojuegos.                              |
-| `src/negocio.js`  | Búsqueda, cálculo de precios y otras reglas de negocio.          |
-| `src/vista.js`    | Creación y actualización de los elementos de la interfaz.        |
-| `src/main.js`     | Conecta los datos, la lógica y la vista; gestiona el formulario. |
-| `index.html`      | Documento que carga la aplicación.                               |
+- `catalogo.js`: contiene solo los datos (`catalogoInicial`). Está aislado
+  porque es la fuente de datos y nunca se modifica.
+- `negocio.js`: reglas de negocio. Incluye las Tablas A, B y C, el cálculo
+  del precio final, y las funciones de venta y reposición. No imprime nada
+  ni sabe cómo se muestra la información.
+- `vistas.js`: funciones que convierten datos en texto para mostrar
+  (por ejemplo, formatear una línea de producto con su aviso de stock bajo).
+- `main.js`: menú, bucle principal y estado de la sesión. Solo coordina
+  los otros módulos.
 
-La separación evita concentrar la aplicación en `main.js`: las reglas de negocio no dependen del DOM y la vista no decide cómo buscar ni cómo calcular el precio. `main.js` coordina las partes.
+### Por qué esta separación
+
+- **Cambios localizados:** si cambia un porcentaje de las tablas, solo toco
+  `negocio.js`. Si cambia el formato del listado, solo `vistas.js`.
+- **Una única fuente de verdad:** los valores de las tablas están en
+  constantes, no repartidos por el código.
+- **Inmutabilidad:** `catalogoInicial` nunca se modifica. Cada venta o
+  reposición devuelve un array nuevo, y `main.js` guarda el catálogo
+  actual en una variable que se reasigna.
+- **Facilidad para probar:** las funciones de `negocio.js` reciben datos y
+  devuelven datos, así que se pueden probar de forma aislada.
 
 ## Ejecución
 

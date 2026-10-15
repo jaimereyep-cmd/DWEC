@@ -5,3 +5,6 @@ export const formatearProducto = (producto) => {
   const aviso = tienesStockBajo(producto) ? "¡¡¡Stock bajo!!!" : "";
   return `${titulo} (${plataforma}) - Stock: ${stock} ${aviso}`;
 };
+
+export const listarProductos = (productos) =>
+  productos.map(formatearProducto).join("\n");

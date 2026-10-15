@@ -45,3 +45,8 @@ export const reponerStock = (productos, id, cantidad) =>
 const UMBRAL_STOCK_BAJO = 3;
 
 export const tieneStockBajo = (producto) => producto.stock < UMBRAL_STOCK_BAJO;
+
+export const filtrarStockBajo = (productos) => productos.filter(tieneStockBajo);
+
+export const filtrarPorCategoria = (productos, categoria) =>
+  productos.filter((producto) => producto.categoria === categoria);
