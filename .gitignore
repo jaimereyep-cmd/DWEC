@@ -3,4 +3,5 @@ dist/
 .vite/
 coverage/
 .DS_Store
+*.local
 npm-debug.log*
