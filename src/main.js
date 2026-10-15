@@ -6,7 +6,6 @@ import {
   getPrecioVenta,
 } from './negocio.js';
 import { crearVista, mostrarError, mostrarProducto } from './vista.js';
-import './style.css';
 
 const app = document.querySelector('#app');
 
