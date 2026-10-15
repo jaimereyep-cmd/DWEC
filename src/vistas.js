@@ -1,8 +1,8 @@
-import { tienesStockBajo } from './negocio.js';
+import { tieneStockBajo } from './negocio.js';
 
 export const formatearProducto = (producto) => {
-  const { titulo, plataforma, categoria, precioBase, conservacion, stock } = producto;
-  const aviso = tienesStockBajo(producto) ? "¡¡¡Stock bajo!!!" : "";
+  const { titulo, plataforma, stock } = producto;
+  const aviso = tieneStockBajo(producto) ? "¡¡¡Stock bajo!!!" : "";
   return `${titulo} (${plataforma}) - Stock: ${stock} ${aviso}`;
 };
 

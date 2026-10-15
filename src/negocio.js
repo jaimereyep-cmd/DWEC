@@ -29,7 +29,7 @@ export const calcularPrecioFinal = (precioBase, estado, cantidad) => {
 };
 
 export const venderProducto = (productos, id, cantidad) =>
-    producto.map((producto) =>
+    productos.map((producto) =>
         producto.id === id
             ? { ...producto, stock: producto.stock - cantidad }
             : producto
