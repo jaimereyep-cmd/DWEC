@@ -15,10 +15,10 @@
 
 // 🔮 PREDICCIONES · ¿Qué DA cada trozo de código?
 export const predicciones = {
-  p1: undefined, // let n = 0; for (let i = 0; i < 3; i++) { n = n + 1; } n
-  p2: undefined, // let s = 0; for (let i = 1; i <= 3; i++) { s = s + i; } s
-  p3: undefined, // let t = ""; for (let i = 1; i <= 3; i++) { t = t + i; } t
-  p4: undefined, // let x = 1; while (x < 10) { x = x * 2; } x
+  p1: 3, // let n = 0; for (let i = 0; i < 3; i++) { n = n + 1; } n
+  p2: 6, // let s = 0; for (let i = 1; i <= 3; i++) { s = s + i; } s
+  p3: "123", // let t = ""; for (let i = 1; i <= 3; i++) { t = t + i; } t
+  p4: 16, // let x = 1; while (x < 10) { x = x * 2; } x
 };
 
 // 👀 EJEMPLO RESUELTO ─────────────────────────────────────────────────────────────────────────
@@ -33,14 +33,19 @@ export function sumaHasta(n) {
 
 // 🔁 REPASO DEL NIVEL 3 ───────────────────────────────────────────────────────────────────────
 // 🔁 4.r · El valor absoluto: el número sin signo.  valorAbsoluto(-7) → 7 · valorAbsoluto(3) → 3   (con un if)
-export function valorAbsoluto(n) {
+export function valorAbsoluto(n) { 
+  if (n < 0) {
+  return n * -1
+} else {
+  return n
+}
   throw new Error("Sin hacer");
 }
 
 // ✍️ TU TURNO ─────────────────────────────────────────────────────────────────────────────────
 // ✍️ 4.1 · Multiplica 1 · 2 · 3 · … · n (el factorial).  factorial(4) → 24 · factorial(1) → 1
 //          Ojo: un acumulador que MULTIPLICA no puede empezar en 0.
-export function factorial(n) {
+export function factorial(n) { 
   throw new Error("Sin hacer");
 }
 
