@@ -12,10 +12,10 @@
 //    typeof dice de qué TIPO es un dato: "number" (número), "string" (texto) o "boolean" (true/false).
 //    Si la respuesta es un texto, va entre comillas: "number". Si es un número, sin comillas: 4.
 export const predicciones = {
-  p1: undefined, // typeof 5
-  p2: undefined, // typeof "5"
-  p3: undefined, // typeof true
-  p4: undefined, // let x = 3; x = x + 1; x
+  p1: "number", // typeof 5
+  p2: "string", // typeof "5"
+  p3: "boolean", // typeof true
+  p4: 4, // let x = 3; x = x + 1; x
 };
 
 // 👀 EJEMPLO RESUELTO ─────────────────────────────────────────────────────────────────────────
@@ -27,22 +27,23 @@ console.log("Vivo en " + ciudad + ", que tiene " + habitantes + " habitantes");
 // En cada una, cambia undefined por el valor que se pide.
 
 // ✍️ 1.1 · Tu nombre, como TEXTO.
-export const nombre = undefined;
+export const nombre = "Jaime";
 
 // ✍️ 1.2 · Tu edad, como NÚMERO (sin comillas).
-export const edad = undefined;
+export const edad = 19;
 
 // ✍️ 1.3 · ¿Eres alumno? Un BOOLEANO: true (verdadero) o false (falso), sin comillas.
-export const esAlumno = undefined;
+export const esAlumno = true;
 
 // ✍️ 1.4 · Empiezas con 10 puntos. En la línea de debajo, SÚMALE 5 a puntos (sin escribir 15: que lo calcule).
 //          Pista: puntos = puntos + 5;   (se lee: «puntos pasa a valer lo que valía más 5»)
-export let puntos = 10;
+export let puntos = 10; 
+puntos = puntos + 5;
 
 
 // ✍️ 1.5 · Un saludo que USE tu variable nombre: "Hola, soy " y tu nombre. Si cambias nombre, el saludo cambia solo.
 //          Dos formas: "Hola, soy " + nombre      o con comillas invertidas: `Hola, soy ${nombre}`
-export const saludo = undefined;
+export const saludo = "Hola, soy " + nombre;
 
 console.log(saludo);
 console.log("Tengo " + edad + " años y " + puntos + " puntos");
