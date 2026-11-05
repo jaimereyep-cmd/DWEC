@@ -16,11 +16,11 @@
 
 // 🔮 PREDICCIONES · ¿Qué DA cada expresión? (true, false, un número o un texto)
 export const predicciones = {
-  p1: undefined, // 5 > 3
-  p2: undefined, // 5 === "5"
-  p3: undefined, // 7 > 3 && 2 > 4
-  p4: undefined, // 7 > 3 || 2 > 4
-  p5: undefined, // let n = 6; let r; if (n > 8) { r = "A"; } else if (n > 5) { r = "B"; } else { r = "C"; } r
+  p1: true, // 5 > 3
+  p2: false, // 5 === "5"
+  p3: false, // 7 > 3 && 2 > 4
+  p4: true, // 7 > 3 || 2 > 4
+  p5: "B", // let n = 6; let r; if (n > 8) { r = "A"; } else if (n > 5) { r = "B"; } else { r = "C"; } r
 };
 
 // 👀 EJEMPLO RESUELTO ─────────────────────────────────────────────────────────────────────────
@@ -35,40 +35,79 @@ export function esMayorDeEdad(edad) {
 
 // 🔁 REPASO DEL NIVEL 2 ───────────────────────────────────────────────────────────────────────
 // 🔁 3.r · La mitad de un número.  mitad(10) → 5 · mitad(7) → 3.5
-export function mitad(n) {
+export function mitad(n) { return n / 2;
   throw new Error("Sin hacer");
 }
 
 // ✍️ TU TURNO ─────────────────────────────────────────────────────────────────────────────────
 // ✍️ 3.1 · El mayor de dos números (si son iguales, cualquiera de los dos).  mayor(3, 8) → 8
-export function mayor(a, b) {
+export function mayor(a, b) { 
+  if (a > b) {
+    return a;
+  } else if (b > a){
+    return b;
+  } else {
+    return a;
+  }
   throw new Error("Sin hacer");
 }
 
 // ✍️ 3.2 · "positivo", "negativo" o "cero".  signo(5) → "positivo" · signo(-2) → "negativo" · signo(0) → "cero"
 export function signo(n) {
+  if (n < 0) {
+    return "negativo"
+  } else if (n === 0) {
+    return "cero"
+  } else {
+    return "positivo"
+  }
   throw new Error("Sin hacer");
 }
 
 // ✍️ 3.3 · La calificación de una nota de 0 a 10:
 //          menos de 5 → "suspenso" · de 5 a menos de 7 → "aprobado" · de 7 a menos de 9 → "notable" · 9 o más → "sobresaliente"
 //          Ojo con los bordes: el 5 ya es "aprobado", el 7 ya es "notable" y el 9 ya es "sobresaliente".
-export function calificacion(nota) {
+export function calificacion(nota) { 
+  if (nota < 5) {
+  return "suspenso"
+} else if (nota < 7) {
+  return "aprobado"
+} else if (nota < 9) {
+  return "notable"
+} else {
+  return "sobresaliente"
+}
   throw new Error("Sin hacer");
 }
 
 // ✍️ 3.4 · ¿Puede entrar al concierto? Tiene que tener 18 o más Y tener entrada (conEntrada es true o false).
 //          puedeEntrar(20, true) → true · puedeEntrar(20, false) → false · puedeEntrar(16, true) → false
-export function puedeEntrar(edad, conEntrada) {
+export function puedeEntrar(edad, conEntrada) { if ((edad >= 18) && (conEntrada === true)) {
+  return true
+} else {
+  return false
+}
   throw new Error("Sin hacer");
 }
 
 // ✍️ 3.5 · El precio de la entrada del cine: menores de 12 → 5 € · 65 o más → 6 € · el resto → 9 €
-export function precioEntrada(edad) {
+export function precioEntrada(edad) { 
+if (edad < 12) {
+  return 5
+} else if (edad >= 65) {
+  return 6;
+} else {
+  return 9;
+}
   throw new Error("Sin hacer");
 }
 
 // ✍️ 3.6 · ¿Es fin de semana? dia es un texto: "lunes", "martes"… Es fin de semana si es "sábado" O "domingo".
-export function esFinde(dia) {
+export function esFinde(dia) { 
+if (dia === "sábado" || dia === "domingo") {
+  return true
+} else {
+  return false
+}
   throw new Error("Sin hacer");
 }
