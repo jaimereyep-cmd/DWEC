@@ -14,10 +14,10 @@
 
 // 🔮 PREDICCIONES · ¿Qué DA cada expresión? Cambia undefined por tu respuesta (números sin comillas, textos con comillas).
 export const predicciones = {
-  p1: undefined, // 7 % 2
-  p2: undefined, // 10 / 4
-  p3: undefined, // "Hola".length
-  p4: undefined, // "Hola mundo".slice(0, 4)
+  p1: 1, // 7 % 2
+  p2: 2.5, // 10 / 4
+  p3: 4, // "Hola".length
+  p4: "Hola", // "Hola mundo".slice(0, 4)
 };
 
 // 👀 EJEMPLO RESUELTO ─────────────────────────────────────────────────────────────────────────
@@ -30,41 +30,41 @@ export function saludar(nombre) {
 
 // 🔁 REPASO DEL NIVEL 1 ───────────────────────────────────────────────────────────────────────
 // 🔁 2.r · Devuelve el TIPO del dato que te pasan: tipoDe(5) → "number" · tipoDe("hola") → "string"
-export function tipoDe(dato) {
+export function tipoDe(dato) { return typeof(dato)
   throw new Error("Sin hacer");
 }
 
 // ✍️ TU TURNO ─────────────────────────────────────────────────────────────────────────────────
 // ✍️ 2.1 · El precio con el 21 % de IVA: el precio por 1.21 (con PUNTO, no coma).  conIva(100) → 121
-export function conIva(precio) {
+export function conIva(precio) { return precio * 1.21;
   throw new Error("Sin hacer");
 }
 
 // ✍️ 2.2 · ¿Es par? Devuelve true o false. Un número es par si el RESTO de dividirlo entre 2 es 0 (el resto: %).
 //          esPar(4) → true · esPar(7) → false          (no hace falta if: n % 2 === 0 ya es true o false)
-export function esPar(n) {
+export function esPar(n) { return n % 2 === 0;
   throw new Error("Sin hacer");
 }
 
 // ✍️ 2.3 · Une nombre y apellido con un espacio en medio.  nombreCompleto("Ana", "López") → "Ana López"
-export function nombreCompleto(nombre, apellido) {
+export function nombreCompleto(nombre, apellido) { return nombre + " " + apellido
   throw new Error("Sin hacer");
 }
 
 // ✍️ 2.4 · Las iniciales con un punto detrás de cada una. La primera letra de un texto es texto[0].
 //          iniciales("Ana", "López") → "A.L."
-export function iniciales(nombre, apellido) {
+export function iniciales(nombre, apellido) { return nombre[0] + "." + apellido[0] + "."
   throw new Error("Sin hacer");
 }
 
 // ✍️ 2.5 · El texto en MAYÚSCULAS y con una exclamación al final. Los textos tienen .toUpperCase()
 //          gritar("hola") → "HOLA!"
-export function gritar(texto) {
+export function gritar(texto) { return texto.toUpperCase() + "!"
   throw new Error("Sin hacer");
 }
 
 // ✍️ 2.6 · ¿Cuántas letras tiene el nombre completo (contando el espacio)? Usa nombreCompleto y .length
 //          letrasDe("Ana", "López") → 9
-export function letrasDe(nombre, apellido) {
+export function letrasDe(nombre, apellido) { return nombreCompleto(nombre, apellido).length
   throw new Error("Sin hacer");
 }
