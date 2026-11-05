@@ -9,9 +9,9 @@
 // 🔮 PREDICCIONES · ¿Qué crees que MUESTRA cada línea? Cambia cada undefined por tu respuesta, ENTRE COMILLAS.
 //    Ejemplo: si crees que muestra Hola, escribe "Hola".  Contesta ANTES de probarlo. Equivocarse no pasa nada.
 export const predicciones = {
-  p1: undefined, // console.log(2 + 3)
-  p2: undefined, // console.log("2" + "3")
-  p3: undefined, // console.log("2 + 3")
+  p1: 5, // console.log(2 + 3)
+  p2: 23, // console.log("2" + "3")
+  p3: "2 + 3", // console.log("2 + 3")
 };
 
 // 👀 EJEMPLO RESUELTO ─────────────────────────────────────────────────────────────────────────
@@ -22,18 +22,20 @@ console.log("¡Hola, mundo!");
 // Escribe cada línea DEBAJO de su comentario. Después de cada una: guarda (Ctrl+S), ejecuta y comprueba.
 
 // ✍️ 0.1 · Muestra una línea que diga «Me llamo » y tu nombre. Por ejemplo: Me llamo Lucía
-
+console.log("Me llamo Jaime");
 
 // ✍️ 0.2 · Muestra el resultado de 7 + 5. Que lo calcule el ordenador: SIN comillas (si no, sale el texto «7 + 5»)
-
+console.log(7+5);
 
 // ✍️ 0.3 · Muestra tres líneas, una debajo de otra: uno, dos y tres (tres console.log)
-
+console.log("uno");
+console.log("dos");
+console.log("tres");
 
 // ✍️ 0.4 · Escribe un COMENTARIO (una línea que empiece por //) que diga: Mi primer programa
 //          Fíjate: el comentario no se muestra al ejecutar. Es una nota para quien lee el código.
-
+// Mi primer programa
 
 // ✍️ 0.5 · La línea de abajo está desactivada (es un comentario) y además tiene un error.
 //          Quítale las // del principio, ejecuta y lee el error que sale. Luego arréglalo.
-// console.log("Ya sé arreglar errores);
+console.log("Ya sé arreglar errores");
