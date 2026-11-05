@@ -1,0 +1,17 @@
+{
+  "name": "dwec-bateria-ud0",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "DWEC · Batería 0: programar desde cero (opcional). Todo se lanza con docker compose.",
+  "scripts": {
+    "dev": "vite",
+    "comprobar": "node comprobador/comprobar.mjs",
+    "probar": "node comprobador/probar.mjs",
+    "ejecutar": "node comprobador/ejecutar.mjs"
+  },
+  "devDependencies": {
+    "@happy-dom/global-registrator": "20.14.6",
+    "vite": "8.3.4"
+  }
+}
