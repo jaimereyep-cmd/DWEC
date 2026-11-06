@@ -46,16 +46,33 @@ export function valorAbsoluto(n) {
 // ✍️ 4.1 · Multiplica 1 · 2 · 3 · … · n (el factorial).  factorial(4) → 24 · factorial(1) → 1
 //          Ojo: un acumulador que MULTIPLICA no puede empezar en 0.
 export function factorial(n) { 
+  let fact =  1;
+  for (let i = 1; i <= n; i++) {
+    fact *= i;
+} return fact;
   throw new Error("Sin hacer");
 }
 
 // ✍️ 4.2 · Una cuenta atrás en un texto.  cuentaAtras(3) → "3 2 1 ¡Ya!"   (acumulador de texto; el bucle va hacia ATRÁS: i--)
-export function cuentaAtras(n) {
+export function cuentaAtras(n) { 
+let resultado = "";
+  for (let i = n; i >= 1; i--) {
+    resultado += i + " ";
+  }
+  return resultado + "¡Ya!";
   throw new Error("Sin hacer");
 }
 
 // ✍️ 4.3 · ¿Cuántos números pares hay del 1 al n?  contarPares(10) → 5 · contarPares(7) → 3   (un if dentro del for)
-export function contarPares(n) {
+export function contarPares(n) { 
+let resultado = "";
+let numero = 0;
+  for (let i = 1; i <= n; i++) { 
+  if (i % 2 === 0) {
+    resultado += i;
+    numero++;
+  }
+} return numero;
   throw new Error("Sin hacer");
 }
 
